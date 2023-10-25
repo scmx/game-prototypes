@@ -34,7 +34,7 @@ new URLSearchParams(location.search).getAll("l").forEach((localhost) => {
   if (a !== "192" || b !== "168") return;
   const host = `${a}.${b}.${c}.${d}`;
   games.push({
-    href: `http://${host}:${port}`,
+    href: `${location.protocol}//${host}:${port}`,
     emoji: "🧪",
     title: `${host} ${port}`,
     tags: [],
