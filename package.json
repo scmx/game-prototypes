@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build": "tsc && vite build --base=/game-prototypes/",
+    "preview": "vite preview --base=/game-prototypes/"
   },
   "devDependencies": {
     "typescript": "^5.0.2",
