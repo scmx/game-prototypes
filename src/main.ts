@@ -25,6 +25,12 @@ const games = [
     title: "Asteroids Game",
     tags: ["typescript", "vanilla"],
   },
+  {
+    href: "https://scmx.github.io/emoji-memory-game",
+    emoji: "🤪",
+    title: "Emoji Memory Game",
+    tags: ["typescript", "react"],
+  },
 ];
 
 new URLSearchParams(location.search).getAll("l").forEach((localhost) => {
