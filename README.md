@@ -13,12 +13,11 @@ current game prototype projects can be reached from.
 You can add a `?l=192.168.1.123:1234` query param in order to add another
 local project.
 
-You start a server with something like: `npm run dev -- --host --https`
-Which exposes: https://192.168.1.9:5173 (https to not violate github pages
-[HSTS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security)).
+You start a server with something like: `npm run dev -- --host`
+Which exposes: https://192.168.1.9:5173
 
 On an iPad for example in a Kiosk app you can now enter
-https://scmx.github.io/game-prototypes?l=192.168.1.9:5173 in order to
+https://192.168.1.9:5173/game-prototypes?l=192.168.1.9:1234 in order to
 add an additional item for your current project.
 
 ## Contributing
