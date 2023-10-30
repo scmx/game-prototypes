@@ -12,6 +12,32 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --body-fg: white;
+  --card-bg: #111;
+  --card-border: #222;
+  --carg-box-shadow: rgb(0 0 0 / 60%);
+  --carg-box-shadow-hover: rgb(255 255 255 / 40%);
+  --title-shadow: black;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+    --body-fg: #333;
+    --card-bg: #eee;
+    --card-border: #ddd;
+    --carg-box-shadow: rgb(255 255 255 / 40%);
+    --carg-box-shadow-hover: rgb(0 0 0 / 60%);
+    --title-shadow: #ccc;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
 }
 
 .grid {
@@ -41,24 +67,15 @@
   flex-direction: column;
   justify-content: stretch;
   align-items: stretch;
-  border: 2px solid #111;
+  border: 2px solid var(--card-border);
   border-radius: 2rem;
-  background: #111;
+  background: var(--card-bg);
+  transition: 400ms box-shadow;
+  box-shadow: 0 0 20px -5px var(--carg-box-shadow);
 }
 .game-anchor:focus,
 .game-anchor:hover {
-  animation-name: game-focus;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-}
-@keyframes game-focus {
-  0% {
-    box-shadow: 0 0 20px -5px rgb(0 0 0 / 60%);
-  }
-  50% {
-    box-shadow: 0 0 20px -5px rgb(255 255 255 / 60%);
-  }
+  box-shadow: 0 0 20px -5px var(--carg-box-shadow-hover);
 }
 .game-emoji {
   overflow: hidden;
@@ -87,7 +104,7 @@
   font-family: monospace;
   font-size: 1.2rem;
   font-weight: bold;
-  text-shadow: 2px 2px 2px black;
+  text-shadow: 2px 2px 2px var(--title-shadow);
 }
 .refresh-button {
   position: fixed;
@@ -103,7 +120,7 @@ a:link,
 a:visited,
 a:hover,
 a:active {
-  color: white;
+  color: var(--body-fg);
 }
 
 body {
@@ -143,17 +160,4 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }
