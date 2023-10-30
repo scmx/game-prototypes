@@ -31,6 +31,12 @@ const games = [
     title: "Emoji Memory Game",
     tags: ["typescript", "react"],
   },
+  {
+    href: "https://scmx.github.io/spelsylt9-rundel-space-game",
+    emoji: "⭕️",
+    title: "Rundel Space Game (spelsylt9)",
+    tags: ["typescript", "vanilla"],
+  },
 ];
 
 new URLSearchParams(location.search).getAll("l").forEach((localhost) => {
